@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Yup from 'yup';
+import {BASE_URL} from '../config.js';
 import { Field, Form, withFormik } from 'formik';
 
 const RSVPForm = ({
@@ -25,10 +26,12 @@ const RSVPForm = ({
           component="select"
           name="rsvp" >
           <option value=""></option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
+          <option value="True">Yes</option>
+          <option value="False">No</option>
         </Field>
       </label>
+      {touched.rsvp && errors.rsvp &&
+      <p className="form-error">{errors.rsvp}</p>}
     </div>
     <div className="form-field">
       <label>Dietary Restrictions
@@ -52,7 +55,12 @@ const RSVPForm = ({
         />
       </label>
     </div>
-    <button type="submit">Submit</button>
+    <button
+      type="submit"
+      disabled={!touched.guestName || errors.rsvp || errors.guestName
+      }>
+      Submit
+    </button>
   </Form>
 )
 
@@ -71,12 +79,28 @@ export const FormikRSVPForm = withFormik({
     }
   },
   validationSchema: Yup.object().shape({
-    rsvp: Yup.string().required('Please select "Yes" or "No"'),
+    rsvp: Yup.boolean().required('Please select "Yes" or "No"'),
     guestName: Yup.string().required('Enter your name'),
     dietaryRestrictions: Yup.string(),
     message: Yup.string(),
   }),
   handleSubmit(values) {
-    console.log(values)
+    fetch(`${BASE_URL}/guests`, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'post',
+      body: JSON.stringify(values)
+    })
+      .then(res => {
+        console.log(res)
+        return res.json();
+      })
+      .then(data => {
+        console.log(data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 })(RSVPForm);
