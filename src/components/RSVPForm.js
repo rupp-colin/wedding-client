@@ -2,6 +2,7 @@ import React from 'react';
 import * as Yup from 'yup';
 import {BASE_URL} from '../config.js';
 import { Field, Form, withFormik } from 'formik';
+import '../styles/RSVPForm.css';
 
 const RSVPForm = ({
   values,
@@ -10,19 +11,33 @@ const RSVPForm = ({
 }) => (
   <Form>
     <div className="form-field">
-      <label>Your name
+      <label>Your name</label>
+      {touched.guestName && errors.guestName &&
+      <p className="form-error">{errors.guestName}</p>}
         <Field
           type="text"
           name="guestName"
           placeholder="Karl Asbell"
+          className="text-input"
         />
-      </label>
-      {touched.guestName && errors.guestName &&
-      <p className="form-error">{errors.guestName}</p>}
     </div>
     <div className="form-field">
+      <label>Email (so we can contact you if needed)</label>
+      {touched.guestEmail && errors.guestEmail &&
+      <p className="form-error">{errors.guestEmail}</p>}
+        <Field
+          type="text"
+          name="guestEmail"
+          placeholder="wedding.guest@hotmail.edu"
+          className="text-input"
+        />
+    </div>
+    <div className="form-field">
+      {touched.rsvp && errors.rsvp &&
+      <p className="form-error">{errors.rsvp}</p>}
       <label>RSVP
         <Field
+          className="drop-down"
           component="select"
           name="rsvp" >
           <option value=""></option>
@@ -30,34 +45,35 @@ const RSVPForm = ({
           <option value="False">No</option>
         </Field>
       </label>
-      {touched.rsvp && errors.rsvp &&
-      <p className="form-error">{errors.rsvp}</p>}
     </div>
     <div className="form-field">
-      <label>Dietary Restrictions
+      <label>Diet Restrictions
         <Field
           component="select"
+          className="drop-down"
           name="dietaryRestrictions" >
+          <option value="none"></option>
           <option value="none">none</option>
           <option value="vegetarian">vegetarian</option>
           <option value="vegan">vegan</option>
           <option value="glutenFree">gluten-free</option>
-          <option value="other">other (please reach out to us)</option>
+          <option value="allergy">food allergy</option>
+          <option value="other">other (please reach out)</option>
         </Field>
       </label>
     </div>
     <div className="form-field">
-      <label>Additional info?
+      <label>Additional info?</label>
         <Field
-          type="text"
+          id="message-box"
+          component="textarea"
           name="message"
-          placeholder="Please let us know if you have any additional questions"
+          placeholder="Please let us know if you have any additional questions, comments, concerns, judgements, wishes, unsolicited advice, distractions, or pictures of cats.  Thanks!"
         />
-      </label>
     </div>
     <button
       type="submit"
-      disabled={!touched.guestName || errors.rsvp || errors.guestName
+      disabled={!touched.guestName || errors.rsvp || errors.guestName || !touched.guestEmail || errors.guestEmail
       }>
       Submit
     </button>
@@ -67,20 +83,23 @@ const RSVPForm = ({
 export const FormikRSVPForm = withFormik({
   mapPropsToValue: ({
     guestName,
+    guestEmail,
     rsvp,
     dietaryRestrictions,
     message,
   }) => {
     return {
       guestName: guestName || '',
+      guestEmail: '',
       rsvp: rsvp || '',
       dietaryRestrictions: dietaryRestrictions || '',
       message: message || '',
     }
   },
   validationSchema: Yup.object().shape({
-    rsvp: Yup.boolean().required('Please select "Yes" or "No"'),
-    guestName: Yup.string().required('Enter your name'),
+    rsvp: Yup.boolean().required('* Please select "Yes" or "No"'),
+    guestName: Yup.string().required('* Please enter your name'),
+    guestEmail: Yup.string().email('* Please provide a valid email address').required('* Please provide an email address'),
     dietaryRestrictions: Yup.string(),
     message: Yup.string(),
   }),
@@ -93,11 +112,7 @@ export const FormikRSVPForm = withFormik({
       body: JSON.stringify(values)
     })
       .then(res => {
-        console.log(res)
         return res.json();
-      })
-      .then(data => {
-        console.log(data)
       })
       .catch(err => {
         console.log(err)
