@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.col-4 {
+    width: 33.333333%;
+    background-color: black;
+    color: white;
+}
+
+.col-8 {
+    width: 66.666666%;
+    background-color: lightgreen;
+}

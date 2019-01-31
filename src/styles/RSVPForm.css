@@ -1,0 +1,44 @@
+Form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-field {
+    margin: 8px;
+}
+
+.form-error {
+    display: block;
+    color: red;
+    margin: 0px;
+    margin-top: 8px;
+    font-size: 10px;
+
+}
+
+.text-input {
+    display:block;
+    margin-top: 8px;
+    padding: 12px;
+    border-radius: 5px;
+    width: 420px;
+}
+
+#message-box {
+    display: block;
+    margin-top: 8px;
+    padding: 12px;
+    border-radius: 5px;
+    width: 420px;
+    height: 200px;
+}
+
+.drop-down {
+    margin-left: 12px;
+    margin-top: 8px;
+}
