@@ -1,0 +1,9 @@
+body {
+    background-image:
+    linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5),
+    ),
+    url('https://img.hipcamp.com/images/c_limit,f_auto,h_1200,q_60,w_1920/v1495389021/campground-photos/enffubr20suln98odoh5/forest_lodging_teepee_tipi-village-retreat.jpg');
+    background-size: cover;
+}
