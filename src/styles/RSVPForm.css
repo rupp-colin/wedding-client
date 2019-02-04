@@ -1,11 +1,14 @@
 Form {
     padding: 50px;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    max-width: 500px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 550px;
+    border-radius: 5px;
+    border: 2px solid black;
 }
 
 .form-field {
@@ -26,7 +29,7 @@ Form {
     margin-top: 8px;
     padding: 12px;
     border-radius: 5px;
-    width: 420px;
+    width: 95%;
 }
 
 #message-box {
@@ -34,11 +37,24 @@ Form {
     margin-top: 8px;
     padding: 12px;
     border-radius: 5px;
-    width: 420px;
+    width: 95%;
     height: 200px;
 }
 
 .drop-down {
     margin-left: 12px;
     margin-top: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+    Form {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    Form {
+        padding: 20px;
+        max-width: 85%;
+    }
 }
