@@ -47,12 +47,11 @@ const RSVPForm = ({
       </label>
     </div>
     <div className="form-field">
-      <label>Diet Restrictions
+      <label>Dietary Restrictions
         <Field
           component="select"
           className="drop-down"
           name="dietaryRestrictions" >
-          <option value="none"></option>
           <option value="none">none</option>
           <option value="vegetarian">vegetarian</option>
           <option value="vegan">vegan</option>
@@ -63,7 +62,7 @@ const RSVPForm = ({
       </label>
     </div>
     <div className="form-field">
-      <label>Additional info?</label>
+      <label>Anything else?</label>
         <Field
           id="message-box"
           component="textarea"
