@@ -1,4 +1,175 @@
+* {
+    transition: .25s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'clethonsDjoice';
+    font-size: 24px;
+    position: relative;
+}
+
+a:before, a:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+
+}
+a:before {
+    opacity: 0;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
+    transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+a:after {
+    opacity: 0;
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+a:hover:before, a:hover:after, a:focus:before, a:focus:after {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+}
+a:hover:before, a:focus:before {
+    transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+a:hover:after, a:focus:after {
+    transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
+    transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+/* CODE FOR ANIMATED HAMBURGER MENU */
+span {
+    display:block;
+    background: white;
+    border-radius: 2px;
+}
+
+#menu-toggle {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    background: url(../images/background-dark.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+#menu-toggle:hover {
+    background: url(../images/background-dark.jpg) no-repeat center center fixed,
+    linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9)
+    );
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+#menu-toggle #hamburger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#menu-toggle #hamburger span {
+    width: 30px;
+    height: 2px;
+    position: relative;
+    top:12px;
+    left: 10px;
+    margin: 5px 0;
+}
+#menu-toggle #hamburger span:nth-child(1){
+    transition-delay: .5s;
+}
+#menu-toggle #hamburger span:nth-child(2){
+    transition-delay: .625s;
+}
+#menu-toggle #hamburger span:nth-child(3){
+    transition-delay: .75s;
+}
+#menu-toggle #cross {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(45deg);
+}
+#menu-toggle #cross span:nth-child(1) {
+    height: 0%;
+    width: 2px;
+    position: absolute;
+    top: 10%;
+    left: 24px;
+    transition-delay: 0s;
+}
+#menu-toggle #cross span:nth-child(2) {
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 10%;
+    top: 24px;
+    transition-delay: .25s;
+}
+#menu-toggle.big-x #hamburger span {
+    width: 0%;
+}
+#menu-toggle.big-x #hamburger span:nth-child(1){
+    transition-delay: 0s;
+}
+#menu-toggle.big-x #hamburger span:nth-child(2){
+    transition-delay: .125s;
+}
+#menu-toggle.big-x #hamburger span:nth-child(3){
+    transition-delay: .25s;
+}
+#menu-toggle.big-x #cross span:nth-child(1) {
+    height: 80%;
+    transition-delay: .625s;
+}
+#menu-toggle.big-x #cross span:nth-child(2) {
+    width: 80%;
+    transition-delay: .375s;
+}
+/* END MENU ANIMATION */
+
+/* THIS IS THE STUFF! */
+
+@-webkit-keyframes menu {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@-webkit-keyframes close {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 #main-nav {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     background: url(../images/background-dark.jpg) no-repeat center center fixed;
@@ -7,33 +178,62 @@
     -o-background-size: cover;
     color:white;
 }
-
-
 .link-container {
     max-width: 140px;
+    min-midth: 140px;
     display: flex;
     justify-content: center;
     padding: 12px;
 }
-
-.menu-toggle {
+#menu-toggle, #menu-bot-spacer {
     display: none;
 }
 
 @media only screen and (max-width: 767px) {
     #main-nav {
         flex-direction: column;
+        position: fixed;
+        top: 50px;
+        left: 0;
     }
-    .link-container {
-        display: none;
+    #menu-toggler-extension.open {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 152px;
+        height: 50px;
+        background: url(../images/background-dark.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+    #menu-bot-spacer {
+        display: flex;
+        width: 152px;
+        height: 50px;
+    }
+    .open {
+        animation: menu 0.5s ease-out 0s 1;
+        left: 0;
+    }
+    .close {
+        animation: close 0.5s ease 0s 1;
+    }
+    #main-nav.close {
+        left: -152px;
     }
     .menu-toggle-show {
         display: flex;
+        width: 150px;
+        margin-left: 12px;
     }
-    .menu-toggle {
+    #menu-toggle {
         font-size: 24px;
-        display: initial;
-        position: absolute;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
         cursor: pointer;
         background: url(../images/background-dark.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
