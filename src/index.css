@@ -22,11 +22,31 @@ body {
     box-sizing: border-box;
 }
 
+/* ############################ */
+/* FONTS GO HERE */
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+@font-face {
+    font-family: 'sailWhale';
+    src: url('./fonts/SailWhale_update-Regular.woff') format("woff");
+    src: url('./fonts/SailWhale_update-Regular.woff2') format("woff2");
+}
+
+@font-face {
+    font-family: 'clethonsDjoice';
+    src: url('./fonts/Clethons Djoice.otf') format('opentype');
+    src: url('./fonts/Clethons Djoice.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'grandfatherMountain';
+    src: url('./fonts/Grandfather-Mountain.otf') format('opentype');
+}
+
+/* ############################ */
 /* grid to be used with flexbox  */
 .row {
     display: flex;
