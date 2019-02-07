@@ -18,17 +18,31 @@ export default class NavLinks extends Component {
   }
 
   render() {
-    let menuToggler = this.state.showMenu ? "link-container col-2 menu-toggle-show" : "link-container col-2"
+    let menuToggler = this.state.showMenu ?
+      "link-container col-2 menu-toggle-show close" :
+      "link-container col-2 close"
+    let animateMenu = this.state.showMenu ? "open" : "close";
+    let animateButton = this.state.showMenu ? "big-x" : "hamburger";
   return (
-    <nav id="main-nav" className="row">
-
-      <div
-        className="link-container menu-toggle"
-        onClick={() => this.toggleMenu()}
-      >
-        <i className="fas fa-bars"></i>
-      </div>
-
+      <div>
+        <div id="menu-toggler-extension" className={animateMenu}>
+        </div>
+        <div
+          id="menu-toggle"
+          className={animateButton}
+          onClick={() => this.toggleMenu()}
+        >
+          <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div id="cross">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <nav id="main-nav" className={`${animateMenu} `}>
       <div className={menuToggler}>
         <Link to='/'>Home</Link>
       </div>
@@ -44,7 +58,10 @@ export default class NavLinks extends Component {
       <div className={menuToggler}>
         <Link to="moreinfo">More Info</Link>
       </div>
+      <div id="menu-bot-spacer" className={menuToggler}>
+      </div>
     </nav>
+  </div>
   )
   }
 }
