@@ -2,6 +2,98 @@
     transition: .25s ease-in-out;
 }
 
+/* CODE FOR ANIMATED HAMBURGER MENU */
+span {
+    display:block;
+    background: white;
+    border-radius: 3px;
+}
+
+#menu-toggle {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    cursor: pointer;
+    background: url(../images/background-dark.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+#menu-toggle:hover {
+    background: url(../images/background-dark.jpg) no-repeat center center fixed,
+    linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.9)
+    );
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+#menu-toggle #hamburger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#menu-toggle #hamburger span {
+    width: 45px;
+    height: 3px;
+    position: relative;
+    top:18px;
+    left: 15px;
+    margin: 7px 0;
+}
+#menu-toggle #hamburger span:nth-child(1){
+    transition-delay: .5s;
+}
+#menu-toggle #hamburger span:nth-child(2){
+    transition-delay: .625s;
+}
+#menu-toggle #hamburger span:nth-child(3){
+    transition-delay: .75s;
+}
+#menu-toggle #cross {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(45deg);
+}
+#menu-toggle #cross span:nth-child(1) {
+    height: 0%;
+    width: 3px;
+    position: absolute;
+    top: 10%;
+    left: 36px;
+    transition-delay: 0s;
+}
+#menu-toggle #cross span:nth-child(2) {
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    left: 10%;
+    top: 36px;
+    transition-delay: .25s;
+}
+#menu-toggle.big-x #hamburger span {
+    width: 0%;
+}
+#menu-toggle.big-x #hamburger span:nth-child(1){
+    transition-delay: 0s;
+}
+#menu-toggle.big-x #hamburger span:nth-child(2){
+    transition-delay: .125s;
+}
+#menu-toggle.big-x #hamburger span:nth-child(3){
+    transition-delay: .25s;
+}
+#menu-toggle.big-x #cross span:nth-child(1) {
+    height: 80%;
+    transition-delay: .625s;
+}
+#menu-toggle.big-x #cross span:nth-child(2) {
+    width: 80%;
+    transition-delay: .375s;
+}
+/* END MENU ANIMATION */
 a {
     text-decoration: none;
     color: white;
@@ -57,98 +149,6 @@ a:hover:after, a:focus:after {
 
 }
 
-/* CODE FOR ANIMATED HAMBURGER MENU */
-span {
-    display:block;
-    background: white;
-    border-radius: 2px;
-}
-
-#menu-toggle {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    cursor: pointer;
-    background: url(../images/background-dark.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-#menu-toggle:hover {
-    background: url(../images/background-dark.jpg) no-repeat center center fixed,
-    linear-gradient(
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.9)
-    );
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-#menu-toggle #hamburger {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-#menu-toggle #hamburger span {
-    width: 30px;
-    height: 2px;
-    position: relative;
-    top:12px;
-    left: 10px;
-    margin: 5px 0;
-}
-#menu-toggle #hamburger span:nth-child(1){
-    transition-delay: .5s;
-}
-#menu-toggle #hamburger span:nth-child(2){
-    transition-delay: .625s;
-}
-#menu-toggle #hamburger span:nth-child(3){
-    transition-delay: .75s;
-}
-#menu-toggle #cross {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    transform: rotate(45deg);
-}
-#menu-toggle #cross span:nth-child(1) {
-    height: 0%;
-    width: 2px;
-    position: absolute;
-    top: 10%;
-    left: 24px;
-    transition-delay: 0s;
-}
-#menu-toggle #cross span:nth-child(2) {
-    width: 0%;
-    height: 2px;
-    position: absolute;
-    left: 10%;
-    top: 24px;
-    transition-delay: .25s;
-}
-#menu-toggle.big-x #hamburger span {
-    width: 0%;
-}
-#menu-toggle.big-x #hamburger span:nth-child(1){
-    transition-delay: 0s;
-}
-#menu-toggle.big-x #hamburger span:nth-child(2){
-    transition-delay: .125s;
-}
-#menu-toggle.big-x #hamburger span:nth-child(3){
-    transition-delay: .25s;
-}
-#menu-toggle.big-x #cross span:nth-child(1) {
-    height: 80%;
-    transition-delay: .625s;
-}
-#menu-toggle.big-x #cross span:nth-child(2) {
-    width: 80%;
-    transition-delay: .375s;
-}
-/* END MENU ANIMATION */
 
 /* THIS IS THE STUFF! */
 
@@ -180,7 +180,6 @@ span {
 }
 .link-container {
     max-width: 140px;
-    min-midth: 140px;
     display: flex;
     justify-content: center;
     padding: 12px;
@@ -190,10 +189,17 @@ span {
 }
 
 @media only screen and (max-width: 767px) {
+    a {
+        font-size: 40px;
+        padding: 6px;
+    }
+    .link-container {
+        max-width: 200px;
+    }
     #main-nav {
         flex-direction: column;
         position: fixed;
-        top: 50px;
+        top: 74px;
         left: 0;
     }
     #menu-toggler-extension.open {
@@ -201,8 +207,8 @@ span {
         position: fixed;
         top: 0;
         left: 0;
-        width: 152px;
-        height: 50px;
+        width: 212px;
+        height: 75px;
         background: url(../images/background-dark.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -221,11 +227,11 @@ span {
         animation: close 0.5s ease 0s 1;
     }
     #main-nav.close {
-        left: -152px;
+        left: -212px;
     }
     .menu-toggle-show {
         display: flex;
-        width: 150px;
+        width: 200px;
         margin-left: 12px;
     }
     #menu-toggle {
