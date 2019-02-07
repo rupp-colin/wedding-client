@@ -1,8 +1,9 @@
 Form {
     padding: 50px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -13,6 +14,7 @@ Form {
 
 .form-field {
     margin: 8px;
+    opacity: 1;
 }
 
 .form-error {
@@ -21,6 +23,7 @@ Form {
     margin: 0px;
     margin-top: 8px;
     font-size: 10px;
+    opacity: 1;
 
 }
 
@@ -37,13 +40,41 @@ Form {
     margin-top: 8px;
     padding: 12px;
     border-radius: 5px;
-    width: 95%;
+    width: 100%;
     height: 200px;
 }
 
 .drop-down {
     margin-left: 12px;
     margin-top: 8px;
+}
+
+button:disabled {
+    color: grey;
+    border: 2px solid grey;
+    cursor: initial;
+}
+
+button {
+    transition: 0s;
+    width: 100%;
+    padding: 6px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    margin: 12px auto;
+
+}
+button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button:active {
+    color: white;
+    background-color: black;
 }
 
 @media only screen and (max-width: 768px) {
