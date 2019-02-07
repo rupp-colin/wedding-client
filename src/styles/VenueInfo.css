@@ -1,0 +1,93 @@
+h1, h2, h3 {
+    font-family: "clethonsDjoice";
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.column {
+    flex-direction: column;
+}
+.pic-container {
+    margin: 0;
+    max-width: 200px;
+    display: flex;
+    padding: 0 12px;
+    background: url(../images/background-dark.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.pic-container img {
+    margin: 6px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.summary, .venue-notes, .direction-container {
+    max-width: 85%;
+    margin: 24px auto;
+    padding: 12px 20px ;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.summary {
+    margin-top: 36px;
+}
+.notes {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.notes-picture img {
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.col-6 {
+    flex-grow: 1;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .pic-container {
+        display: none;
+    }
+    .venue-notes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .notes-picture img, .notes-picture {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .notes h2 {
+        text-align: center;
+    }
+    .notes ul {
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+}
