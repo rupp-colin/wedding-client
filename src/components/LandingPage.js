@@ -14,8 +14,14 @@ export default function LandingPage() {
         <h1>INVITE GOES HEAR</h1>
         <h1>INVITE GOES HEAR</h1>
         <h1>INVITE GOES HEAR</h1>
+        <h1>INVITE GOES HEAR</h1>
+        <h1>INVITE GOES HEAR</h1>
+        <h1>INVITE GOES HEAR</h1>
       </div>
       <div className="col-8">
+        <h1>PICTURE OF US GOES HERE</h1>
+        <h1>PICTURE OF US GOES HERE</h1>
+        <h1>PICTURE OF US GOES HERE</h1>
         <h1>PICTURE OF US GOES HERE</h1>
         <h1>PICTURE OF US GOES HERE</h1>
         <h1>PICTURE OF US GOES HERE</h1>
