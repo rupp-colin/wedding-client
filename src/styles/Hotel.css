@@ -1,0 +1,17 @@
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.center {
+    justify-content: center;
+}
+
+.hotel-container {
+    justify-content: space-evenly;
+    margin: 12px;
+    max-width: 400px;
+}
