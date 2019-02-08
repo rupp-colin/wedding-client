@@ -6,7 +6,7 @@ import {FormikRSVPForm} from './components/RSVPForm.js';
 import NavLinks from './components/NavLinks.js';
 import LandingPage from './components/LandingPage.js';
 import VenueInfo from './components/VenueInfo.js';
-import Hotels from './components/Hotels.js';
+import Accomodations from './components/Accomodations.js';
 import MoreInfo from './components/MoreInfo.js';
 
 class App extends Component {
@@ -18,8 +18,8 @@ class App extends Component {
         <Route exact path='/' component={LandingPage} />
         <Route exact path='/rsvp' component={FormikRSVPForm} />
         <Route exact path='/venue' component={VenueInfo} />
-        <Route exact path='/hotels' component={Hotels} />
-        <Route exact path='/moreinfo' component={MoreInfo} />*/}
+        <Route exact path='/hotels' component={Accomodations} />
+        <Route exact path='/moreinfo' component={MoreInfo} />
       </div>
     </Router>
     );
