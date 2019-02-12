@@ -8,6 +8,8 @@ const RSVPForm = ({
   values,
   errors,
   touched,
+  isSubmitting,
+  submitCount,
 }) => (
   <Form>
     <div className="form-field">
@@ -72,10 +74,17 @@ const RSVPForm = ({
     </div>
     <button
       type="submit"
-      disabled={!touched.guestName || errors.rsvp || errors.guestName || !touched.guestEmail || errors.guestEmail
+      disabled=
+      {!touched.guestName || errors.rsvp || errors.guestName
+      || !touched.guestEmail || errors.guestEmail || isSubmitting
       }>
       Submit
     </button>
+    {values.hasSubmitted && !touched.guestName &&
+      <div className="form-is-submitted">
+        <p>THANK YOU FOR THE RSVP</p>
+        <div className="close-div"></div>
+      </div>}
   </Form>
 )
 
@@ -86,6 +95,7 @@ export const FormikRSVPForm = withFormik({
     rsvp,
     dietaryRestrictions,
     message,
+    hasSubmitted,
   }) => {
     return {
       guestName: guestName || '',
@@ -93,6 +103,7 @@ export const FormikRSVPForm = withFormik({
       rsvp: rsvp || '',
       dietaryRestrictions: dietaryRestrictions || '',
       message: message || '',
+      hasSubmitted: hasSubmitted || false,
     }
   },
   validationSchema: Yup.object().shape({
@@ -101,8 +112,10 @@ export const FormikRSVPForm = withFormik({
     guestEmail: Yup.string().email('* Please provide a valid email address').required('* Please provide an email address'),
     dietaryRestrictions: Yup.string(),
     message: Yup.string(),
+    hasSubmitted: Yup.boolean(),
   }),
-  handleSubmit(values) {
+  handleSubmit(values, { setSubmitting, resetForm }) {
+    console.log(values);
     fetch(`${BASE_URL}/guests`, {
       headers: {
         'Content-Type': 'application/json'
@@ -110,7 +123,9 @@ export const FormikRSVPForm = withFormik({
       method: 'post',
       body: JSON.stringify(values)
     })
-      .then(res => {
+      .then((res) => {
+        resetForm({guestEmail: '', guestName: '', rsvp: '', dietaryRestriction: '', message: '', hasSubmitted: true});
+        setSubmitting(false);
         return res.json();
       })
       .catch(err => {
