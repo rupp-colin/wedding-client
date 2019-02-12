@@ -81,8 +81,13 @@ const RSVPForm = ({
       Submit
     </button>
     {values.hasSubmitted && !touched.guestName &&
+        ! touched.guestEmail && !touched.rsvp && !touched.dietaryRestriction &&
+        !touched.message &&
       <div className="form-is-submitted">
-        <p>THANK YOU FOR THE RSVP</p>
+        <h3>Thanks!</h3>
+        <p>Your rsvp has arrived, and you should recieve a confirmation
+          email.  If you have any additional questions, please feel free to
+          reach out to us at ourweddingemail@gmail.com.</p>
         <div className="close-div"></div>
       </div>}
   </Form>
