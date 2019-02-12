@@ -7,9 +7,9 @@ Form {
     justify-content: center;
     align-self: flex-start;
     margin: 0 auto;
-    margin-top: 75px;
+    margin-top: 36px;
     margin-bottom: 50px;
-    max-width: 550px;
+    width: 70%;
     border-radius: 5px;
     border: 2px solid black;
 }
@@ -107,13 +107,14 @@ button:active {
 
 @media only screen and (max-width: 768px) {
     Form {
-        max-width: 80%;
+        width: 80%;
+        margin-top: 50px;
     }
 }
 
 @media only screen and (max-width: 600px) {
     Form {
         padding: 20px;
-        max-width: 85%;
+        width: 85%;
     }
 }

@@ -72,6 +72,9 @@ h3 {
         flex-wrap: wrap;
         justify-content: center;
     }
+    #venue-info-container {
+        margin-top: 14px;
+    }
 }
 
 @media only screen and (max-width: 525px) {

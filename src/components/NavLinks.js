@@ -47,7 +47,7 @@ export default class NavLinks extends Component {
         <Link to='/'>Home</Link>
       </div>
       <div className={menuToggler}>
-        <Link to="/rsvp">RSVP</Link>
+        <Link to="/rsvp">Rsvp</Link>
       </div>
       <div className={menuToggler}>
         <Link to="/venue">Venue</Link>

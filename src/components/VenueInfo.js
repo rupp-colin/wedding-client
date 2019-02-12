@@ -11,8 +11,10 @@ export default function() {
         <img src="https://via.placeholder.com/150" />
         <img src="https://via.placeholder.com/150" />
         <img src="https://via.placeholder.com/150" />
+        <img src="https://via.placeholder.com/150" />
+        <img src="https://via.placeholder.com/150" />
       </div>
-      <div>
+      <div id="venue-info-container">
         <div className="summary">
           <h1>Tipi Village Resort</h1>
           <p>Lorem ipsum dolor sit amet et delectus accommodare his consul
