@@ -1,0 +1,12 @@
+#accomodations-container {
+    flex-wrap: wrap;
+}
+
+.menu-spacer {
+    height: 75px;
+    width: 100%;
+}
+
+.hotel-spacer {
+    margin: 12px;
+}

@@ -14,4 +14,27 @@
     justify-content: space-evenly;
     margin: 12px;
     max-width: 400px;
+    background:
+    rgba(255, 255, 255, .8);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.hotel-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 6px auto;
+}
+
+.hotel-container h1, .hotel-container p {
+    margin: 20px;
+}
+
+.hotel-container a {
+    color: black;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
 }
