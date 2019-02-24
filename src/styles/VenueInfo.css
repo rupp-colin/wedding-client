@@ -24,9 +24,8 @@ h3 {
 }
 .pic-container {
     margin: 0;
-    max-width: 200px;
     display: flex;
-    padding: 0 12px;
+    padding: 20px 12px;
     background: url(../images/background-dark.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
