@@ -1,18 +1,20 @@
 import React from 'react';
 import '../styles/VenueInfo.css';
+import picNames from '../images/picsOfUs/inviteIteration1.png';
+import picIndia from '../images/picsOfUs/indiaWedding.jpg';
+import picIndiaTwo from '../images/picsOfUs/weddingPic2.jpg';
+import picPlants from '../images/picsOfUs/plants.JPG';
+import picOne from '../images/picsOfUs/pictureOfUs.jpg';
 
 export default function() {
   return (
     <section className="flex">
       <div className="pic-container column">
-        <img src="https://via.placeholder.com/150" />
-        <img src="https://via.placeholder.com/150" />
-        <img src="https://via.placeholder.com/150" />
-        <img src="https://via.placeholder.com/150" />
-        <img src="https://via.placeholder.com/150" />
-        <img src="https://via.placeholder.com/150" />
-        <img src="https://via.placeholder.com/150" />
-        <img src="https://via.placeholder.com/150" />
+        <img src={picNames} />
+        <img src={picIndiaTwo} />
+        <img src={picIndia} />
+        <img src={picOne} />
+        <img src={picPlants} />
       </div>
       <div id="venue-info-container">
         <div className="summary">
