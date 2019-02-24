@@ -12,6 +12,7 @@ const RSVPForm = ({
   submitCount,
 }) => (
   <Form>
+    <h2>Please fill out the form below to RSVP</h2>
     <div className="form-field">
       <label>Your name</label>
       {touched.guestName && errors.guestName &&
