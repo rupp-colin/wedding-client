@@ -9,6 +9,8 @@ import VenueInfo from './components/VenueInfo.js';
 import HotelsPage from './pages/Hotelspage.js';
 import MoreInfo from './components/MoreInfo.js';
 
+// test comment for deployment purposes
+
 class App extends Component {
   render() {
     return (
