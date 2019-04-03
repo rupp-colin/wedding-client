@@ -23,7 +23,7 @@ export default function Accomodations() {
     near there should put you about a 25 minute drive from the venue."
     hotelLink="https://www.marriott.com/hotels/travel/eugcy-courtyard-eugene-springfield/"
       />
-      <div>
+      <div className="add-options">
         <p>
           For additional options we recommend searching for hotels in Eugene or Springfield.
         </p>
