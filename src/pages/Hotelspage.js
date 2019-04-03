@@ -11,10 +11,10 @@ export default function HotelsPage() {
   return (
     <div className="flex">
       <div className="pic-container column">
-        <img src={picNames} />
-        <img src={picOne} />
-        <img src={picThree} />
-        <img src={picFour} />
+        <img src={picNames} alt="colin and kelsey" />
+        <img src={picOne}  alt="colin and kelsey"/>
+        <img src={picThree} alt="colin and kelsey" />
+        <img src={picFour} alt="colin and kelsey" />
       </div>
       <div className="flex" style={styles}>
         <Accomodations />

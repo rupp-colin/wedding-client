@@ -10,11 +10,11 @@ export default function() {
   return (
     <section className="flex">
       <div className="pic-container column">
-        <img src={picNames} />
-        <img src={picIndiaTwo} />
-        <img src={picIndia} />
-        <img src={picOne} />
-        <img src={picPlants} />
+        <img src={picNames}  alt="colin and kelsey"/>
+        <img src={picIndiaTwo} alt="colin and kelsey" />
+        <img src={picIndia} alt="colin and kelsey" />
+        <img src={picOne} alt="colin and kelsey" />
+        <img src={picPlants} alt="colin and kelsey" />
       </div>
       <div id="venue-info-container">
         <div className="summary">
@@ -46,7 +46,7 @@ export default function() {
             </ul>
           </div>
           <div className="flex center col-6 notes-picture">
-            <img src="https://cdn0.weddingwire.com/emp/fotos/4/4/3/8/7/3/t40_1303872870032-AugSept20086201.jpg" />
+            <img src="https://cdn0.weddingwire.com/emp/fotos/4/4/3/8/7/3/t40_1303872870032-AugSept20086201.jpg" alt="Tipi Village Retreat"/>
           </div>
         </div>
         <div className="direction-container flex center column">

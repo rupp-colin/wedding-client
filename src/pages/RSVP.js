@@ -10,11 +10,11 @@ export default function RSVP() {
   return (
     <main>
       <div className="pic-container column">
-        <img src={picNames} />
-        <img src={picOne} />
-        <img src={picThree} />
-        <img src={picTwo} />
-        <img src={picFour} />
+        <img src={picNames} alt="colin and kelsey" />
+        <img src={picOne} alt="colin and kelsey" />
+        <img src={picThree} alt="colin and kelsey" />
+        <img src={picTwo} alt="colin and kelsey" />
+        <img src={picFour} alt="colin and kelsey" />
       </div>
       <FormikRSVPForm />
     </main>

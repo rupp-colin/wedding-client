@@ -1,5 +1,4 @@
 import React from 'react';
-import ComingSoon from './ComingSoon.js';
 import '../styles/Hotel.css';
 
 export default function Hotel(props) {
@@ -9,7 +8,7 @@ export default function Hotel(props) {
       <img
         src={props.hotelImage}
         className="flex center"
-        alt={`picture of ${props.hotelName}`} />
+        alt={`${props.hotelName}`} />
       <p>{props.hotelDesc}</p>
       <a href={props.hotelLink}>Book here!</a>
     </div>
