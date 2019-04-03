@@ -18,7 +18,6 @@ class App extends Component {
       <div className="App">
         <NavLinks />
         <Route exact path='/' component={LandingPage} />
-        <Route exact path='/rsvp' component={RSVP} />
         <Route exact path='/venue' component={VenueInfo} />
         <Route exact path='/hotels' component={HotelsPage} />
         <Route exact path='/moreinfo' component={MoreInfo} />
