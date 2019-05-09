@@ -18,31 +18,23 @@ export default function() {
       </div>
       <div id="venue-info-container">
         <div className="summary">
-          <h1>Tipi Village Resort</h1>
-          <p>Lorem ipsum dolor sit amet et delectus accommodare his consul
-            copiosae legendos at vix ad putent delectus delicata usu.
-            Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos
-            erant dolorum an. Per facer affert ut. Mei iisque mentitum
-            moderatius cu. Sit munere facilis accusam eu dicat falli
-            copiosae legendos at vix ad putent delectus delicata usu.
-            Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos
-            erant dolorum an. Per facer affert ut. Mei iisque mentitum
-            moderatius cu. Sit munere facilis accusam eu dicat falli
-            consulatu at
+          <h1>Tipi Village Retreat</h1>
+          <p>
+            If you've found this page, that means you are considering coming to our wedding. We hope you do!
+            The wedding will be held at <a className='venueLink' href="http://tipivillageretreat.com/index.html">Tipi Village Retreat</a> - a tranquil wooded haven
+            just outside of Eugene, Oregon.
           </p>
         </div>
         <div className="venue-notes flex row">
           <div className="column flex center notes col-6">
             <h2>Notes about Tipi Village</h2>
             <ul>
-              <li>qwoeiqwn ijsakldf wer sf sdfwe r gfh</li>
-              <li> poi klj n juhu hj jio ;k jklhn</li>
-              <li>qwoeiqwn sdfwe r gfh</li>
-              <li>qwoeiqwn ijsakldf wer sf sdfwe r gfh</li>
-              <li>qwoeiqwn sf sdfwe r gfh</li>
-              <li>qwoeiqwn ijsakldf wer sf sdfwe rlk  l;kl klknjbbncvn ffc gfh</li>
-              <li>qwoeiqwn ijsakldf wer sf sdfwe r gfh</li>
-              <li>qwoeiqwn ijsakldf wer sf sdfwe r gfh</li>
+              <li>There is very limited cell phone reception</li>
+              <li>There is, however, wifi on site!</li>
+              <li>It is a non-smoking venue, except for a small concrete patio</li>
+              <li>There is a small stream that runs through the property</li>
+              <li>The morning after the wedding, we will be having breakfast at the site. If you would like to join us, please let us
+                know so we can make the arrangements</li>
             </ul>
           </div>
           <div className="flex center col-6 notes-picture">
@@ -53,21 +45,27 @@ export default function() {
           <h2>Directions</h2>
           <h3>From Portland</h3>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Get on I-5 South (or 205 South, which will turn into I-5)</li>
+            <li>Drive for like, 80+ miles</li>
+            <li>Take exit 216, signs for Oregon 228 towards Halsey/Brownsville</li>
+            <li>Turn left onto 228</li>
+            <li>Continue for exactly 11.2 miles</li>
+            <li>Turn right onto Brush Creek Road</li>
+            <li>In about 6 miles, the road you are on should turn into Marcola Road</li>
+            <li>Continue for another 6.8 miles</li>
+            <li>Turn left onto Paschelke Road</li>
+            <li>Turn right to stay on Paschelke Road</li>
+            <li>Turn left onto Wendling Road</li>
           </ul>
-          <h3>From Eugene</h3>
+          <h3>From Southern Oregon/Eugene</h3>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Get on I-5 North</li>
+            <li>Take exit 194A to merge onto OR-126 E toward Springfield</li>
+            <li>Take the 42nd St/Marcola exit</li>
+            <li>Turn left onto N 42nd St</li>
+            <li>Turn right onto Marcola Road</li>
+            <li>Continue on Marcola for about 10 miles</li>
+            <li>Turn right onto Wendling Rd</li>
           </ul>
         </div>
       </div>

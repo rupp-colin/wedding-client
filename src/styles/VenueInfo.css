@@ -61,6 +61,10 @@ h3 {
     flex-grow: 1;
 }
 
+.venueLink {
+    color: inherit;
+    font: inherit;
+}
 
 
 @media only screen and (max-width: 768px) {
