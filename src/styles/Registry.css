@@ -1,0 +1,25 @@
+.registry {
+    display: flex;
+    justify-content: flex center;
+    flex-direction: column;
+    margin: 5%;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .8)
+}
+
+.registryLink {
+    color: black;
+    font-size: 21px;
+    cursor: pointer;
+    width: 196px;
+}
+
+.registryLink:hover {
+    color: black;
+}
+
+.registryLink:before, .registryLink:after {
+    background-color: black;
+}
