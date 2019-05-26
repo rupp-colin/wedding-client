@@ -11,7 +11,7 @@ export default function Registry() {
         anyone. We have a small registry you can access through the
         link below if gift-giving makes you happy.
       </p>
-      <a className="registryLink" href="www.placeholder.com">Kelsey and Colin's Registry</a>
+      <a className="registryLink" href="https://www.macys.com/wgl/registry/guest/7075962">Kelsey and Colin's Registry</a>
       <p>
         Also, if you would like to shop elsewhere, please know that you can remove things
         from our registry if needed.
